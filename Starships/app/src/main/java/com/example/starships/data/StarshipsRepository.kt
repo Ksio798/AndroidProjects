@@ -1,6 +1,10 @@
 package com.example.starships.data
 
-class StarshipsRepository(
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class StarshipsRepository @Inject constructor(
     private val api: SwapiApi
 ) {
 

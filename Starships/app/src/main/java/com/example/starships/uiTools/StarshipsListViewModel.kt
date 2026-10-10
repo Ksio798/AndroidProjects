@@ -2,7 +2,8 @@ package com.example.starships.uiTools
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.starships.data.AppContainer
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import com.example.starships.data.StarshipsRepository
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
@@ -11,8 +12,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-class StarshipsListViewModel(
-    private val repository: StarshipsRepository = AppContainer.repository
+@HiltViewModel
+class StarshipsListViewModel @Inject constructor(
+    private val repository: StarshipsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(StarshipsListState())

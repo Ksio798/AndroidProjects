@@ -3,7 +3,8 @@ package com.example.starships.uiTools
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.starships.data.AppContainer
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import com.example.starships.data.Starship
 import com.example.starships.data.StarshipsRepository
 import kotlinx.coroutines.CancellationException
@@ -16,9 +17,10 @@ sealed interface StarshipDetailEvent {
     data object Retry : StarshipDetailEvent
 }
 
-class StarshipDetailViewModel(
+@HiltViewModel
+class StarshipDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val repository: StarshipsRepository = AppContainer.repository
+    private val repository: StarshipsRepository
 ) : ViewModel() {
 
     private val shipId: String =

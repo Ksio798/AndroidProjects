@@ -41,20 +41,20 @@ API-ключ и авторизация не требуются.
 
 ### 1. Загрузка данных
 
-![Загрузка данных](screenshots/pic1.png)
+<img src="screenshots/pic1.png" alt="Загрузка данных" width="300">
 
 ### 2. Ошибка загрузки
 
-![Ошибка загрузки](screenshots/pic2.png)
+<img src="screenshots/pic2.png" alt="Ошибка загрузки" width="300">
 
 ### 3. Главный экран
 
-![Главный экран](screenshots/pic3.png)
+<img src="screenshots/pic3.png" alt="Главный экран" width="300">
 
 ### 4. Детали корабля
 
-![Детали корабля](screenshots/pic4.png)
+<img src="screenshots/pic4.png" alt="Детали корабля" width="300">
 
 ### 5. Отсутствие результата
 
-![Отсутствие результата](screenshots/pic5.png)
+<img src="screenshots/pic5.png" alt="Отсутствие результата" width="300">

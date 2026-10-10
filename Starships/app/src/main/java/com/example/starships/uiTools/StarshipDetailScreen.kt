@@ -14,7 +14,11 @@ import com.example.starships.data.Starship
 @Composable
 fun StarshipDetailScreen(
     state: UiState<Starship>,
+    isFavorite: Boolean,
+    canUpdateFavorite: Boolean,
+    favoriteError: String?,
     onEvent: (StarshipDetailEvent) -> Unit,
+    onToggleFavorite: (Starship) -> Unit,
     onBack: () -> Unit
 ) {
     Scaffold(
@@ -90,7 +94,28 @@ fun StarshipDetailScreen(
                         text = ship.name,
                         style = MaterialTheme.typography.headlineMedium
                     )
+                    Button(
+                        onClick = {
+                            onToggleFavorite(ship)
+                        },
+                        enabled = canUpdateFavorite,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            if (isFavorite) {
+                                "Удалить из избранного"
+                            } else {
+                                "Добавить в избранное"
+                            }
+                        )
+                    }
 
+                    favoriteError?.let { message ->
+                        Text(
+                            text = message,
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
                     DetailField("Модель", ship.model)
                     DetailField("Производитель", ship.manufacturer)
                     DetailField("Класс", ship.starshipClass)

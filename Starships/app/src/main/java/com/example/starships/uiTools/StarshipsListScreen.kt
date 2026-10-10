@@ -18,12 +18,18 @@ import androidx.compose.ui.unit.dp
 fun StarshipsListScreen(
     state: StarshipsListState,
     onEvent: (StarshipsListEvent) -> Unit,
-    onShipClick: (String) -> Unit
+    onShipClick: (String) -> Unit,
+    onFavoritesClick: () -> Unit
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Корабли Star Wars") }
+                title = { Text("Корабли Star Wars") },
+                actions = {
+                    TextButton(onClick = onFavoritesClick) {
+                        Text("Избранное")
+                    }
+                }
             )
         }
     ) { innerPadding ->

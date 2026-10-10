@@ -69,20 +69,20 @@ API-ключ и авторизация не требуются.
 
 ### 1. Загрузка данных
 
-![Загрузка данных](screenshots/pic1.png)
+<img alt="Загрузка данных" src="screenshots/pic1.png" width="300"/>
 
 ### 2. Ошибка загрузки и повтор запроса
 
-![Ошибка загрузки](screenshots/pic2.png)
+<img alt="Ошибка загрузки" src="screenshots/pic2.png" width="300"/>
 
 ### 3. Главный экран
 
-![Главный экран](screenshots/pic3.png)
+<img alt="Главный экран" src="screenshots/pic3.png" width="300"/>
 
 ### 4. Детали корабля и добавление в избранное
 
-![Детали корабля](screenshots/pic4.png)
+<img alt="Детали корабля" src="screenshots/pic4.png" width="300"/>
 
 ### 5. Избранное из Room после перезапуска приложения
 
-![Избранное после перезапуска](screenshots/pic5.png)
+<img alt="Избранное после перезапуска" src="screenshots/pic5.png" width="300"/>
